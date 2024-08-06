@@ -1,0 +1,97 @@
+:root {
+  --primary: #2eb897;
+  --primary-gradient: #11ae88;
+  --secondary: #2a84ee;
+  --md-secondary: #e8f2fc;
+  --ligth-secondary: #eaf3fd;
+  --black: #000;
+  --dark: #212121;
+  --md-dark: #6c778e;
+  --cadet-grey: #969eb1;
+  --silver: #c3c3c3;
+  --gainsboro: #d9d9d9;
+  --ligth-gainsboro: #dbe1e9;
+  --white: #fff;
+  --ghost-white: #f6faff;
+  --ligth-ghost-white: #f5fbff;
+  --lavender: #cedff4;
+  --wb: #702a8a;
+  --ozon: #1065ff;
+  --ligth-beige: #fff1d7;
+  --beige: #ffb57f;
+}
+
+.body {
+  font-family: "NT Somic", sans-serif;
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+.body--opened-menu {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1568px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+.btn {
+  font-family: "NT Somic Bold";
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 35px;
+  border-radius: 30px;
+  background: linear-gradient(125deg, var(--primary) 0%, var(--secondary) 100%);
+  cursor: pointer;
+  z-index: 0;
+
+  position: relative;
+}
+.btn > span {
+  position: relative;
+  z-index: 1;
+}
+.btn::after {
+  content: '';
+  font-family: "NT Somic Bold";
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 35px;
+  border-radius: 30px;
+  background-color: #11ae8700;
+  opacity: 0;
+  background: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn:hover:after {
+  opacity: 1;
+}
+
+
+/* ======================= */
+/* ==== МЕДИА ЗАПРОСЫ ==== */
+/* ======================= */
+
+@media (max-width: 780px) {
+  .container {
+    padding: 0 20px;
+  }
+}

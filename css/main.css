@@ -1,0 +1,8 @@
+@import "fonts.css";
+@import "reset.css";
+@import "global.css";
+
+/* == Компоненты == */
+
+@import "components/header.css";
+@import "components/hero.css";
