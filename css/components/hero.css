@@ -105,6 +105,9 @@
   .header__hero-try-button {
     width: 30vw;
   }
+  .header__hero-try {
+    padding: 35px 20px;
+  }
 }
 @media (max-width: 600px) {
   .header__hero-try-button {
@@ -118,5 +121,9 @@
       var(--secondary) 0%,
       var(--primary) 100%
     );
+  }
+  
+  .hero__deco_2 {
+    display: none;
   }
 }

@@ -166,7 +166,9 @@
     position: fixed;
     inset: 0;
     z-index: 10;
-    background: var(--ligth-secondary);
+
+    background: url(../../images/modal__bg.png);
+    background-size: cover;
 
     transform: translateX(50%);
     opacity: 0;
