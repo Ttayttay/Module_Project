@@ -1,0 +1,33 @@
+.main__opportunities {
+  margin-top: 100px;
+}
+
+/* ==================== */
+/* ==НАСТРОЕКА ИНПУТА== */
+/* ==================== */
+
+.main__opportunities-tabs > input[type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4,
+#tab-btn-5:checked ~ #content-5 {
+  display: flex;
+}
+
+.main__opportunities-tabs > input[type="radio"]:checked + label {
+  color: red;
+}
+
+.main__opportunities-item::before {
+  content: "•";
+  color: var(--primary);
+  margin-right: 13px;
+}
