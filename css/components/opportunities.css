@@ -20,10 +20,29 @@
 #tab-btn-4:checked ~ #content-4,
 #tab-btn-5:checked ~ #content-5 {
   display: flex;
+  background: var(--tab-checked);
 }
 
+.main__opportunities-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: var(--tab-priamry);
+}
+
+.main__opportunities-tabs > label {
+  font-family: "NT Somic Bold";
+  font-size: 26px;
+  color: var(--primary);
+
+  display: block;
+  padding: 30px 40px;
+  max-width: 188px;
+  cursor: pointer;
+}
 .main__opportunities-tabs > input[type="radio"]:checked + label {
-  color: red;
+  background: var(--tab-checked);
+  color: var(--black);
 }
 
 .main__opportunities-item::before {
