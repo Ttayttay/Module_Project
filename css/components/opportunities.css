@@ -33,11 +33,12 @@
 .main__opportunities-tabs > label {
   font-family: "NT Somic Bold";
   font-size: 26px;
+  text-align: center;
   color: var(--primary);
 
   display: block;
   padding: 30px 40px;
-  max-width: 188px;
+  max-width: 269px;
   cursor: pointer;
 }
 .main__opportunities-tabs > input[type="radio"]:checked + label {
