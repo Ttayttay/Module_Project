@@ -316,31 +316,40 @@
         </div>
       </header>
       <main class="main">
-        <section class="main__opportunities">
-          <div class="container">
+        <div class="container">
+          <section class="main__opportunities">
             <h2 class="title">Возможности сервиса</h2>
-            <div class="main__opportunities-tabs">
-              <input
-                checked
-                id="tab-btn-1"
-                name="tab-btn"
-                type="radio"
-                value=""
-              />
-              <label for="tab-btn-1">Финансовая аналитика</label>
-              <input id="tab-btn-2" name="tab-btn" type="radio" value="" />
-              <label for="tab-btn-2">Товарная аналитика</label>
-              <input id="tab-btn-3" name="tab-btn" type="radio" value="" />
-              <label for="tab-btn-3">Аналитика внутренней рекламы</label>
-              <input id="tab-btn-4" name="tab-btn" type="radio" value="" />
-              <label for="tab-btn-4">Статистика</label>
-              <input id="tab-btn-5" name="tab-btn" type="radio" value="" />
-              <label for="tab-btn-5">Инструменты</label>
-              <div class="tab-content" id="content-1">
+            <ul class="tab-control">
+              <li class="tab-control__item">
+                <a
+                  class="tab-control__link tab-control__link--active"
+                  href="#tab1"
+                  >Финансовая <br />аналитика</a
+                >
+              </li>
+              <li class="tab-control__item">
+                <a class="tab-control__link" href="#tab2"
+                  >Товарная <br />аналитика</a
+                >
+              </li>
+              <li class="tab-control__item">
+                <a class="tab-control__link" href="#tab3"
+                  >Аналитика внутренней рекламы</a
+                >
+              </li>
+              <li class="tab-control__item">
+                <a class="tab-control__link" href="#tab4">Статистика</a>
+              </li>
+              <li class="tab-control__item">
+                <a class="tab-control__link" href="#tab5">Инструменты</a>
+              </li>
+            </ul>
+            <div class="main__opportunities-content">
+              <div class="tab-content tab-content--active" id="tab1">
+                <div class="title__inblock">
+                  Инструменты для финансовой аналитики
+                </div>
                 <div class="main__opportunities-description">
-                  <div class="title__inblock">
-                    Инструменты для финансовой аналитики
-                  </div>
                   <ul class="main__opportunities-list">
                     <li class="main__opportunities-item">
                       Отчёт о прибылях и убытках (P&L)
@@ -352,16 +361,16 @@
                     <li class="main__opportunities-item">Сводка продаж</li>
                     <li class="main__opportunities-item">Учёт самовыкупов</li>
                   </ul>
-                </div>
-                <div class="main__opportunities-image">
-                  <img src="images/opportunities-bg-1.jpg" alt="" />
+                  <div class="main__opportunities-image">
+                    <img src="images/opportunities-bg-1.jpg" alt="" />
+                  </div>
                 </div>
               </div>
-              <div class="tab-content" id="content-2">
+              <div class="tab-content" id="tab2">
+                <div class="title__inblock">
+                  Инструменты для товарной аналитики
+                </div>
                 <div class="main__opportunities-description">
-                  <div class="title__inblock">
-                    Инструменты для товарной аналитики
-                  </div>
                   <ul class="main__opportunities-list">
                     <li class="main__opportunities-item">
                       Сводка продаж по артикулам и размерам
@@ -378,17 +387,16 @@
                     </li>
                     <li class="main__opportunities-item">Расчет поставок</li>
                   </ul>
-                </div>
-                <div class="main__opportunities-image">
-                  <img src="images/opportunities-bg-2.jpg" alt="" />
+                  <div class="main__opportunities-image">
+                    <img src="images/opportunities-bg-2.jpg" alt="" />
+                  </div>
                 </div>
               </div>
-              <div class="tab-content" id="content-3">
+              <div class="tab-content" id="tab3">
+                <div class="title__inblock">
+                  Инструменты для аналитики внутренней рекламы на маркетплейсах
+                </div>
                 <div class="main__opportunities-description">
-                  <div class="title__inblock">
-                    Инструменты для аналитики внутренней рекламы на
-                    маркетплейсах
-                  </div>
                   <ul class="main__opportunities-list">
                     <li class="main__opportunities-item">Аналитика рекламы</li>
                     <li class="main__opportunities-item">
@@ -402,14 +410,14 @@
                       Определение реальной рекламной ставки в поиске Wildberries
                     </li>
                   </ul>
-                </div>
-                <div class="main__opportunities-image">
-                  <img src="images/opportunities-bg-3.jpg" alt="" />
+                  <div class="main__opportunities-image">
+                    <img src="images/opportunities-bg-3.jpg" alt="" />
+                  </div>
                 </div>
               </div>
-              <div class="tab-content" id="content-4">
+              <div class="tab-content" id="tab4">
+                <div class="title__inblock">Инструменты для статистики</div>
                 <div class="main__opportunities-description">
-                  <div class="title__inblock">Инструменты для статистики</div>
                   <ul class="main__opportunities-list">
                     <li class="main__opportunities-item">Дашборд</li>
                     <li class="main__opportunities-item">
@@ -425,14 +433,14 @@
                       Сводная информация о заказах по времени
                     </li>
                   </ul>
-                </div>
-                <div class="main__opportunities-image">
-                  <img src="images/opportunities-bg-4.jpg" alt="" />
+                  <div class="main__opportunities-image">
+                    <img src="images/opportunities-bg-4.jpg" alt="" />
+                  </div>
                 </div>
               </div>
-              <div class="tab-content" id="content-5">
+              <div class="tab-content" id="tab5">
+                <div class="title__inblock">Дополнительные инструменты</div>
                 <div class="main__opportunities-description">
-                  <div class="title__inblock">Дополнительные инструменты</div>
                   <ul class="main__opportunities-list">
                     <li class="main__opportunities-item">
                       Калькулятор unit экономики
@@ -441,14 +449,14 @@
                       Калькулятор участия в акциях Wildberries
                     </li>
                   </ul>
-                </div>
-                <div class="main__opportunities-image">
-                  <img src="images/opportunities-bg-5.jpg" alt="" />
+                  <div class="main__opportunities-image">
+                    <img src="images/opportunities-bg-5.jpg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     </div>
 

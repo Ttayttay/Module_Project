@@ -6,7 +6,7 @@
   --ligth-secondary: #eaf3fd;
   --black: #000;
   --dark: #212121;
-  --tab-checked: #f6faff;
+  --tab-active: #f6faff;
   --tab-priamry: #e8f2fc;
   --md-dark: #6c778e;
   --cadet-grey: #969eb1;
@@ -64,7 +64,7 @@
   z-index: 1;
 }
 .btn::after {
-  content: '';
+  content: "";
   font-family: "NT Somic Bold";
   text-align: center;
   color: #ffffff;
@@ -86,7 +86,7 @@
 .btn:hover:after {
   opacity: 1;
 }
-.title{
+.title {
   font-family: "NT Somic Bold";
   font-size: 46px;
   margin-bottom: 50px;
@@ -95,10 +95,8 @@
 .title__inblock {
   font-family: "NT Somic Bold";
   font-size: 30px;
-  margin-top: 60px;
   margin-bottom: 35px;
 }
-
 
 /* ======================= */
 /* ==== МЕДИА ЗАПРОСЫ ==== */
