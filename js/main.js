@@ -27,11 +27,11 @@
     e.preventDefault();
 
     const tabButton = e.target.closest(".tab-control__link");
+    if (document.documentElement.clientWidth < 900) return;
 
     if (!tabButton) return;
 
     const tabContendID = tabButton.getAttribute("href");
-    // console.log(tabButton.getAttribute('href'))
 
     document
       .querySelector(".tab-content--active")
@@ -43,4 +43,26 @@
       .classList.remove("tab-control__link--active");
     tabButton.classList.add("tab-control__link--active");
   }
+
+  //Аккордеон на адаптиве
+  const oppAccordionItem = document.querySelectorAll(".accordion-list");
+
+  oppAccordionItem.forEach((e) => {
+    e.addEventListener("click", (e) => {
+      const accordionControl = e.target.closest(".accordion-list__control");
+      if (!accordionControl) return;
+      if (document.documentElement.clientWidth > 900) return;
+
+      const accordionItem = accordionControl.parentElement;
+      const accordionContent = accordionControl.nextElementSibling;
+      
+      accordionItem.classList.toggle("accordion-list__item--opened");
+
+      if (accordionItem.classList.contains("accordion-list__item--opened")) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      } else {
+        accordionContent.style.maxHeight = null;
+      }
+    });
+  });
 })();

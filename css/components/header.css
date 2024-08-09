@@ -65,7 +65,9 @@
   align-items: center;
   margin-right: 10px;
 }
-
+.nav__enterence-singup{
+  margin-bottom: 0;
+}
 .enterece__modal {
   display: none;
 }

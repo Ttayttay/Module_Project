@@ -75,5 +75,9 @@ a {
   color: inherit;
 }
 
+button {
+  background: none;
+}
+
 /* ================ */
 

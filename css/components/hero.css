@@ -106,7 +106,7 @@
     width: 30vw;
   }
   .header__hero-try {
-    padding: 35px 20px;
+    padding: 35px 20px 0;
   }
 }
 @media (max-width: 600px) {

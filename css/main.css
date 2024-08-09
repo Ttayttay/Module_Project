@@ -7,4 +7,5 @@
 @import "components/header.css";
 @import "components/hero.css";
 @import "components/statistic.css";
-@import "components/opportunities.css";
+@import "components/opportunities-tabs.css";
+@import "components/opportunities-accordion.css";
