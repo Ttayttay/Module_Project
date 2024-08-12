@@ -1,6 +1,9 @@
 :root {
   --primary: #2eb897;
   --primary-gradient: #11ae88;
+  --profi-price: #11ae8733;
+  --price: #2a85ee28;
+  --transperent-price: #ffffff00;
   --secondary: #2a84ee;
   --md-secondary: #e8f2fc;
   --ligth-secondary: #eaf3fd;
@@ -86,6 +89,26 @@
 
 .btn:hover:after {
   opacity: 1;
+}
+
+.btn-tariffs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  background: #ffffff00;
+  color: #000;
+  border: 1px solid var(--primary)
+}
+.btn-tariffs:hover {
+  color: #ffffff;
+}
+.btn-tariffs:hover .btn-tariffs-svg path{
+  fill: #ffffff;
+}
+.btn-tariffs-svg {
+  display: inline-block;
+  vertical-align: middle;
 }
 .title {
   font-family: "NT Somic Bold";

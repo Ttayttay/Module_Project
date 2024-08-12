@@ -39,6 +39,9 @@
   align-self: flex-end;
   max-width: 485px;
 }
+.offer__try-free-img-block {
+  max-width: 551px;
+}
 .offer__try-img-block img {
   width: 100%;
 }
