@@ -26,42 +26,9 @@
   font-size: clamp(18px, 3vw, 26px);
   color: var(--md-dark);
 }
+
 .header__hero-try {
-  padding: 50px 40px;
   max-width: 782px;
-  width: 100%;
-  background: linear-gradient(125deg, var(--primary) 0%, var(--secondary) 100%);
-  border-radius: 20px;
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
-}
-.header__hero-try-text {
-  position: relative;
-  margin-bottom: 41px;
-  max-width: 542px;
-  width: 100%;
-  z-index: 1;
-}
-.header__hero-try-form {
-  position: relative;
-  z-index: 1;
-}
-.header__hero-try-input {
-  padding-left: 23px;
-  width: 100%;
-  font-size: 20px;
-  color: var(--cadet-grey);
-  height: 52px;
-  border-radius: 30px;
-}
-.header__hero-try-button {
-  font-size: 18px;
-  max-width: 264px;
-  width: 100%;
-  position: absolute;
-  right: 5px;
-  top: 5px;
 }
 
 .hero__deco_1 {
@@ -102,27 +69,12 @@
     margin-top: 26px;
     margin-bottom: 40px;
   }
-  .header__hero-try-button {
-    width: 30vw;
-  }
   .header__hero-try {
     padding: 35px 20px 0;
   }
 }
 @media (max-width: 600px) {
-  .header__hero-try-button {
-    position: inherit;
-    margin-top: 20px;
 
-    max-width: 100%;
-    width: 100%;
-    background: linear-gradient(
-      125deg,
-      var(--secondary) 0%,
-      var(--primary) 100%
-    );
-  }
-  
   .hero__deco_2 {
     display: none;
   }
