@@ -1,5 +1,3 @@
-.tariffs {
-}
 .tariff__title {
   margin-bottom: 50px;
 }
@@ -104,14 +102,42 @@
 }
 /* ================= */
 
+@media (max-width: 1000px) {
+  .tariffs__content-tab--active {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tariffs__content-tab-block{
+    max-width: 700px;
+  }
+}
 @media (max-width: 900px) {
   .tariff__tab-control {
     gap: 20px;
+  }
+  .tariffs__content-price{
+    font-size: 24px;
+  }
+  .tariffs__content-month-price{
+    font-size: 18px;
   }
 }
 @media (max-width: 740px) {
   .tariff__tab-control {
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+}
+@media (max-width: 600px) {
+  .tariffs__content-price{
+    font-size: 20px;
+  }
+  .tariffs__content-month-price{
+    font-size: 16px;
+  }
+}
+@media (max-width: 528px) {
+  .tariff__tab-item{
+    max-width: 490px;
   }
 }

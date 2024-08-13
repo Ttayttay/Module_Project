@@ -1,5 +1,6 @@
 .main__opportunities-accordion {
   display: none;
+  scroll-behavior: smooth;
 }
 .accordion-list__item{
   border-radius: 10px;

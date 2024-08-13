@@ -55,13 +55,60 @@
 
       const accordionItem = accordionControl.parentElement;
       const accordionContent = accordionControl.nextElementSibling;
-      
+
       accordionItem.classList.toggle("accordion-list__item--opened");
 
       if (accordionItem.classList.contains("accordion-list__item--opened")) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
       } else {
         accordionContent.style.maxHeight = null;
+      }
+    });
+  });
+
+  // Табы с тарифами
+  const tarifTabControls = document.querySelector(".tariff__tab-control");
+
+  tarifTabControls.addEventListener("click", tarifToggleTab);
+
+  function tarifToggleTab(e) {
+    e.preventDefault();
+
+    const tarifTabButton = e.target.closest(".tariff__tab-link");
+
+    if (!tarifTabButton) return;
+
+    const tarifTabContendID = tarifTabButton.getAttribute("href");
+
+    document
+      .querySelector(".tariffs__content-tab--active")
+      .classList.remove("tariffs__content-tab--active");
+    document
+      .querySelector(tarifTabContendID)
+      .classList.add("tariffs__content-tab--active");
+
+    document
+      .querySelector(".tariff__tab-link--active")
+      .classList.remove("tariff__tab-link--active");
+      tarifTabButton.classList.add("tariff__tab-link--active");
+  }
+  //Аккордеон FAQ
+  const faqAccordionItem = document.querySelectorAll(".faq__accordion-list");
+
+  faqAccordionItem.forEach((e) => {
+    e.addEventListener("click", (e) => {
+      const faqAccordionControl = e.target.closest(".faq__accordion-list__control");
+      if (!faqAccordionControl) return;
+
+      const faqAccordionItem = faqAccordionControl.parentElement;
+      const faqAccordionContent = faqAccordionControl.nextElementSibling;
+
+      faqAccordionItem.classList.toggle("faq__accordion-list__item--opened");
+
+      if (faqAccordionItem.classList.contains("faq__accordion-list__item--opened")) {
+        faqAccordionContent.style.maxHeight = faqAccordionContent.scrollHeight + "px";
+      } else {
+        faqAccordionContent.style.maxHeight = null;
       }
     });
   });

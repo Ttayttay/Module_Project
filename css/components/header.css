@@ -44,6 +44,14 @@
   margin-right: auto;
   gap: 50px;
 }
+
+.nav__item{
+  color: #000000;
+  transition: color 0.4s;
+}
+.nav__item:hover{
+  color: var(--primary);
+}
 .nav__enterence {
   font-family: "NT Somic Bold";
   display: flex;
@@ -53,6 +61,11 @@
 .nav__enterence-singin {
   cursor: pointer;
   display: flex;
+  color: #000000;
+  transition: color 0.4s;
+}
+.nav__enterence-singin:hover {
+  color: var(--primary);
 }
 .nav__enterence-singin-question {
   display: none;

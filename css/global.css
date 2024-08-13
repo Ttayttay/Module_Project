@@ -26,6 +26,11 @@
   --beige: #ffb57f;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5vw;
+}
+
 .body {
   font-family: "NT Somic", sans-serif;
   line-height: 1.25;
@@ -98,12 +103,12 @@
   gap: 6px;
   background: #ffffff00;
   color: #000;
-  border: 1px solid var(--primary)
+  border: 1px solid var(--primary);
 }
 .btn-tariffs:hover {
   color: #ffffff;
 }
-.btn-tariffs:hover .btn-tariffs-svg path{
+.btn-tariffs:hover .btn-tariffs-svg path {
   fill: #ffffff;
 }
 .btn-tariffs-svg {
@@ -126,7 +131,6 @@
   color: var(--dark);
 }
 
-
 .title__inblock {
   font-family: "NT Somic Bold";
   font-size: 30px;
@@ -139,6 +143,10 @@
   line-height: 125%;
   letter-spacing: 0.6px;
   color: var(--dark);
+}
+.description {
+  font-size: clamp(18px, 3vw, 26px);
+  color: var(--md-dark);
 }
 
 .try {
@@ -186,6 +194,7 @@
 @media (max-width: 1100px) {
   .title__inblock {
     font-size: 22px;
+    margin: 25px 0 10px 0;
   }
   .second-title {
     width: 100%;
