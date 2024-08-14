@@ -30,6 +30,7 @@
   }
   
   .accordion-list__control {
+    text-align: left;
     color: var(--primary);
     display: flex;
     justify-content: space-between;

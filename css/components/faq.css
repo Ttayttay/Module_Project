@@ -115,7 +115,7 @@
 }
 @media (max-width: 1200px) {
   .faq__title {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 @media (max-width: 1000px) {
@@ -160,7 +160,7 @@
 }
 @media (max-width: 600px) {
   .faq__title {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .faq__description {
     margin: 20px 0;

@@ -1,6 +1,7 @@
 @import "fonts.css";
 @import "reset.css";
 @import "global.css";
+@import "swiper-bundle.min.css";
 
 /* == Компоненты == */
 
@@ -16,3 +17,7 @@
 @import "components/testimonials.css";
 @import "components/faq.css";
 @import "components/footer.css";
+
+/* == Модалки == */
+
+@import "components/modals.css";

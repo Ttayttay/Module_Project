@@ -40,7 +40,10 @@ html {
 .body--opened-menu {
   overflow: hidden;
 }
-
+.open-reg{
+  overflow: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
 .wrapper {
   min-height: 100%;
   width: 100%;

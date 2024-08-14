@@ -96,6 +96,7 @@
   color: var(--md-dark);
   text-align: left;
   transition: color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .footer__nav-link:focus {

@@ -90,14 +90,16 @@
     document
       .querySelector(".tariff__tab-link--active")
       .classList.remove("tariff__tab-link--active");
-      tarifTabButton.classList.add("tariff__tab-link--active");
+    tarifTabButton.classList.add("tariff__tab-link--active");
   }
   //Аккордеон FAQ
   const faqAccordionItem = document.querySelectorAll(".faq__accordion-list");
 
   faqAccordionItem.forEach((e) => {
     e.addEventListener("click", (e) => {
-      const faqAccordionControl = e.target.closest(".faq__accordion-list__control");
+      const faqAccordionControl = e.target.closest(
+        ".faq__accordion-list__control"
+      );
       if (!faqAccordionControl) return;
 
       const faqAccordionItem = faqAccordionControl.parentElement;
@@ -105,11 +107,71 @@
 
       faqAccordionItem.classList.toggle("faq__accordion-list__item--opened");
 
-      if (faqAccordionItem.classList.contains("faq__accordion-list__item--opened")) {
-        faqAccordionContent.style.maxHeight = faqAccordionContent.scrollHeight + "px";
+      if (
+        faqAccordionItem.classList.contains("faq__accordion-list__item--opened")
+      ) {
+        faqAccordionContent.style.maxHeight =
+          faqAccordionContent.scrollHeight + "px";
       } else {
         faqAccordionContent.style.maxHeight = null;
       }
     });
   });
+
+  // Слайдер
+
+  const swiper = new Swiper(".swiper", {
+    spaceBetween: 40,
+    navigation: {
+      nextEl: ".testimonials__nav-right",
+      prevEl: ".testimonials__nav-left",
+    },
+    pagination: {
+      el: ".testimonials__swiper-pagination",
+      clickable: true,
+      type: "bullets",
+    },
+    keyboard: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      781: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
+  // кнопка "Читать полностью"
+  const readBtn = document.querySelectorAll(".testimonials__btn--active");
+  readBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("testimonials__btn--active");
+      const reviewsCard = btn.closest(".testimonials__swiper-slide");
+      const reviewsText = reviewsCard.querySelector(".testimonials__text");
+      reviewsText.classList.toggle("testimonials__text--open");
+      const reviewsBottom = reviewsCard.querySelector(
+        ".testimonials__text-bottom"
+      );
+      reviewsBottom.classList.toggle("testimonials__text-bottom--close");
+    });
+  });
+
+  // Модалка регистрации
+
+  document.addEventListener("click", regOpenModal);
+
+  function regOpenModal(e) {
+    const regButton = e.target.closest(".nav__enterence-singup") || e.target.closest(".nav__enterence-singup");
+    const regCloseButton = e.target.closest(".modal__close-btn");
+
+    if (!regButton && !regCloseButton) return;
+    if (document.documentElement.clientWidth < 780) return;
+
+    if (!document.body.classList.contains("open-reg")) {
+      document.body.classList.add("open-reg");
+    } else {
+      document.body.classList.remove("open-reg");
+    }
+  }
 })();
