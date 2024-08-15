@@ -40,7 +40,11 @@ html {
 .body--opened-menu {
   overflow: hidden;
 }
-.open-reg{
+.open-reg {
+  overflow: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.open-entry {
   overflow: hidden;
   transition: opacity 0.4s, visibility 0.4s;
 }
@@ -110,6 +114,9 @@ html {
 }
 .btn-tariffs:hover {
   color: #ffffff;
+}
+.btn-tariffs .btn-tariffs-svg path {
+  fill: var(--primary);
 }
 .btn-tariffs:hover .btn-tariffs-svg path {
   fill: #ffffff;

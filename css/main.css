@@ -20,4 +20,5 @@
 
 /* == Модалки == */
 
-@import "components/modals.css";
+@import "components/modal-reg.css";
+@import "components/modal-entrty.css";

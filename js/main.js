@@ -162,16 +162,47 @@
   document.addEventListener("click", regOpenModal);
 
   function regOpenModal(e) {
-    const regButton = e.target.closest(".nav__enterence-singup") || e.target.closest(".nav__enterence-singup");
-    const regCloseButton = e.target.closest(".modal__close-btn");
+    const changeToSingin = e.target.closest(".change__to-singin");
+    const regButton =
+      e.target.closest(".nav__enterence-singup");
+    const regCloseButton = e.target.closest(".reg-modal__close-btn");
 
     if (!regButton && !regCloseButton) return;
-    if (document.documentElement.clientWidth < 780) return;
 
     if (!document.body.classList.contains("open-reg")) {
       document.body.classList.add("open-reg");
     } else {
       document.body.classList.remove("open-reg");
+    }
+
+    if(changeToSingin){
+      document.body.classList.remove("open-reg");
+      document.body.classList.add("open-entry");
+    }
+  }
+
+  // Модалка входа
+
+  document.addEventListener("click", entryOpenModal);
+
+  function entryOpenModal(e) {
+    const changeToSingup = e.target.closest(".change__to-singup");
+    const entButton =
+      e.target.closest(".nav__enterence-singin");
+    const entButtonPhone =
+      e.target.closest(".enterece__modal");
+    const entCloseButton = e.target.closest(".in-modal__close-btn");
+
+    if (!entButton && !entCloseButton && !entButtonPhone) return;
+
+    if (!document.body.classList.contains("open-entry")) {
+      document.body.classList.add("open-entry");
+    } else {
+      document.body.classList.remove("open-entry");
+    }
+    if(changeToSingup){
+      document.body.classList.remove("open-entry");
+      document.body.classList.add("open-reg");
     }
   }
 })();
